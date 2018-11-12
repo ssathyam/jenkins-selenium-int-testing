@@ -35,6 +35,7 @@ public class GoogleStartPageTest {
 
 	@After
 	public void tearDownWebDriver() {
+		TimeUnit.MINUTES.sleep(1);
 		driver.quit();
 	}
 
@@ -43,7 +44,6 @@ public class GoogleStartPageTest {
 	public void pageBodyIsNotNull() throws MalformedURLException {
 		String bodyText = driver.findElement(By.tagName("body")).getText();
 		assertTrue(bodyText != null);
-		TimeUnit.MINUTES.sleep(1);
 	}
 
 
