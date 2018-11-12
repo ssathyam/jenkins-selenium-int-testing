@@ -35,7 +35,7 @@ public class GoogleStartPageTest {
 
 	@After
 	public void tearDownWebDriver() {
-		TimeUnit.MINUTES.sleep(1);
+		SECONDS.sleep(60);
 		driver.quit();
 	}
 
