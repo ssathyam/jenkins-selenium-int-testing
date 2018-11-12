@@ -14,6 +14,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
+import java.util.concurrent.TimeUnit;
+
 public class GoogleStartPageTest {
 
 	private WebDriver driver;
@@ -41,6 +43,7 @@ public class GoogleStartPageTest {
 	public void pageBodyIsNotNull() throws MalformedURLException {
 		String bodyText = driver.findElement(By.tagName("body")).getText();
 		assertTrue(bodyText != null);
+		TimeUnit.MINUTES.sleep(1);
 	}
 
 
